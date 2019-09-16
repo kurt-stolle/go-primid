@@ -34,14 +34,14 @@ You need to pick your own prime numbers unique to your application. For suggesti
 # Usage example
 1. Create a new `primid` instance using
 ```go
-var generator = primid.NewGenerator(1580030173, 59260789, 1163945558)
+var generator = primid.NewGenerator(1580030173, 1163945558)
 ```
 2. Generate a hash, in this example we want to obfruscate the value `15`
 ```go
-var hash=generator.encode(15);
+var hash=generator.Encode(15);
 ```
 3. Use the hash as output of your API or other system.
 4. Turn the hash back into a number. If the hash from the example above is used, then `id` is equal to `15`.
 ```go
-var id=generator.decode(hash);
+var id=generator.Decode(hash);
 ```
